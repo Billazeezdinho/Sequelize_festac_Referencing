@@ -1,0 +1,27 @@
+{
+    "name": "newsequelize",
+    "version": "1.0.0",
+    "main": "server.js",
+    "scripts": {
+        "dev": "nodemon server.js",
+        "start": "node server.js",
+        "db:create": "sequelize db:create",
+        "db:migrate": "npx sequelize-cli db:migrate",
+        "db:undo:migrate": "npx sequelize-cli db:migrate:undo",
+        "seeding": "npx sequelize-cli db:seed:all",
+        "undo:seeding": "npx sequelize-cli db:seed:undo",
+        "generate:model": "npx sequelize-cli migration:generate --name create-product"
+    },
+    "keywords": [],
+    "author": "Dinho",
+    "license": "ISC",
+    "description": "Cloud",
+    "dependencies": {
+        "express": "^4.21.2",
+        "init": "^0.1.2",
+        "mysql2": "^3.12.0",
+        "newsequelize": "file:",
+        "sequelize": "^6.37.5",
+        "uuid": "^11.0.5"
+    }
+}
