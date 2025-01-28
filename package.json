@@ -6,6 +6,7 @@
         "dev": "nodemon server.js",
         "start": "node server.js",
         "db:create": "sequelize db:create",
+        "db:undo:create": "sequelize db:create:undo",
         "db:migrate": "npx sequelize-cli db:migrate",
         "db:undo:migrate": "npx sequelize-cli db:migrate:undo",
         "seeding": "npx sequelize-cli db:seed:all",
@@ -17,6 +18,7 @@
     "license": "ISC",
     "description": "Cloud",
     "dependencies": {
+        "cli": "^1.0.1",
         "express": "^4.21.2",
         "init": "^0.1.2",
         "mysql2": "^3.12.0",

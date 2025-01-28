@@ -1,6 +1,7 @@
 const { Sequelize, DataTypes, Model } = require('sequelize');
 const sequelize = require('../DATABASE/sequelize'); 
 const Product = require('./product');
+const {v4 : UUID } = require('uuid');
 
 
   class Store extends Model {}
@@ -8,8 +9,9 @@ const Product = require('./product');
     //model attributes are defined here
     id: {
       allowNull: false,
+      defaultValue: UUID,
       primaryKey: true,
-      type: DataTypes.STRING
+      type: DataTypes.UUID
     },
     name: {
       type:DataTypes.STRING,
@@ -27,7 +29,7 @@ const Product = require('./product');
   }, {
     sequelize,
     modelName: 'Store',
-    tableName: 'stores',
+    tableName: 'Stores',
     timestamps: true
   });
 
