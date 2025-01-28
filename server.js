@@ -1,7 +1,7 @@
 //import express database
 const express = require('express');
 //import sequelize database
-const sequelize = require('../DATABASE/sequelize');
+const sequelize = require('./DATABASE/sequelize');
 const storeRouter = require('./routes/storeRouter');
 const productRouter = require('./routes/productRouter');
 
